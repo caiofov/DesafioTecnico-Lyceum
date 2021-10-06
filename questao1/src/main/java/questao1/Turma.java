@@ -4,9 +4,9 @@ public class Turma {
 	Aluno aluno1;
 	Aluno aluno2;
 	Aluno aluno3;
-	Turma(){}
+	Turma(){} //construtor sem parametros
 	
-	Turma(Aluno aluno1, Aluno aluno2, Aluno aluno3){
+	Turma(Aluno aluno1, Aluno aluno2, Aluno aluno3){ //construtor que recebe os objetos de aluno
 		this.aluno1 = aluno1;
 		this.aluno2 = aluno2;
 		this.aluno3 = aluno3;
@@ -17,4 +17,5 @@ public class Turma {
 		return media;
 	
 	}
+	
 }

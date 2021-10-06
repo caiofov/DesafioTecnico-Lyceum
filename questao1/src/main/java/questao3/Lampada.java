@@ -4,7 +4,7 @@ public class Lampada {
 	boolean estado;
 	
 	Lampada(boolean estado){
-		this.estado = estado;
+		this.estado = estado; //true -> ligado | false -> desligado
 	}
 	
 	void ligar() {estado = true;}
