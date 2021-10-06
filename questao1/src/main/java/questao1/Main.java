@@ -1,4 +1,5 @@
 package questao1;
+import java.util.ArrayList;
 
 public class Main {
 	public static void main(String[] args) {
@@ -16,12 +17,19 @@ public class Main {
 		
 		Turma turma = new Turma(aluno1,aluno2,aluno3);
 		
+		//arraylist para facilitar o print
+		ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+		alunos.add(aluno1);
+		alunos.add(aluno2);
+		alunos.add(aluno3);
+		
 		System.out.println("            Prova 1     |    Prova 2  ");
 		System.out.println("         Pt 1 - Pt 2    |  Pt 1 - Pt 2");
-		System.out.println("Aluno 1:    "+aluno1.prova1.notaParte1 + " ; "+ aluno1.prova1.notaParte2+ "      "+ aluno1.prova2.notaParte1 + " ; " + aluno1.prova2.notaParte2);
-		System.out.println("Aluno 2:    "+aluno2.prova1.notaParte1 + " ; "+ aluno2.prova1.notaParte2+ "      "+ aluno2.prova2.notaParte1 + " ; " + aluno2.prova2.notaParte2);
-		System.out.println("Aluno 1:    "+aluno3.prova1.notaParte1 + " ; "+ aluno1.prova1.notaParte2+ "      "+ aluno3.prova2.notaParte1 + " ; " + aluno3.prova2.notaParte2);
-
+		
+		for(int i = 0; i < alunos.size(); i++) {
+			System.out.println("Aluno "+(i+1)+":    "+alunos.get(i).prova1.notaParte1 + " ; "+ alunos.get(i).prova1.notaParte2+ "      "+ alunos.get(i).prova2.notaParte1 + " ; " + alunos.get(i).prova2.notaParte2);
+		}
+		
 		System.out.println("\nMédia da turma: " + turma.calcularMedia());
 	
 	}
