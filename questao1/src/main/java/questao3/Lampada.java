@@ -9,4 +9,12 @@ public class Lampada {
 	
 	void ligar() {estado = true;}
 	void desligar() {estado = false;}
+	void imprimir() {
+		if(estado) {
+			System.out.println("Lâmpada ligada");
+		}
+		else {
+			System.out.println("Lâmpada desligada");
+		}
+	}
 }
